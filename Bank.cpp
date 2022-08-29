@@ -22,7 +22,7 @@ float amount(string s)
     return amt;
 }
 
-int validateAccount(string s)
+int getAccount(string s)
 {
 
     int acNo;
@@ -92,7 +92,7 @@ void Bank ::Deposit()
     float amt;
     int index;
 
-    acNo = validateAccount("Deposit");
+    acNo = getAccount("Deposit");
     index = searchIndex(acNo, accounts);
     
     if (index==-1)
@@ -111,7 +111,7 @@ void Bank ::Withdrawal()
     int acNo;
     float amt;
     int index;
-    acNo = validateAccount("Withdrawal");
+    acNo = getAccount("Withdrawal");
 
     index = searchIndex(acNo, accounts);
     if (index==-1)
