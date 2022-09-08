@@ -1,6 +1,8 @@
+#*******Method 1******
 Output:
 	g++ singleton_class.cpp singleton_main.cpp -o singleton
 
+#*******Method 2******
 # CP = g++
 # Output:
 # 	$(CP) singleton_class.cpp singleton_main.cpp -o singleton
@@ -8,7 +10,7 @@ Output:
 # Clean:
 # 	rm singleton
 
-
+#*******Method 3******
 # CP = g++
 # Output: singleton_class.o singleton_main.o 
 # 	$(CP) singleton_class.cpp singleton_main.cpp -o singleton
