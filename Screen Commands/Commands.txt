@@ -1,0 +1,46 @@
+screen command in Linux provides the ability to launch and use multiple shell sessions from a single ssh session.
+When a process is started with ‘screen’, the process can be detached from session & then can reattach the session at a later time.
+
+SYNTAX:
+screen [-opts] [cmd [args]]
+
+//create a new screen named process1
+screen -S process1
+
+Ctrl^a + d: It detach a screen session without stopping it.
+
+//check the list of active screens
+screen -ls
+
+//delete a screen and its elements
+screen -XS <id>or<name> quit 
+where id is screen id and name is screen name.
+
+//re-attach screen
+screen -r <screen name>
+
+//view manual or command OPTIONS inside screen
+Ctrl^a + ?
+
+//split screens
+Ctrl^a + | : splits the screens horizontally
+Ctrl^a + S : splits the screens Verically
+
+
+OPTIONS
+-dmS name: It start as daemon: Screen session in detached mode.
+-D (-r): It detach and logout remote (and reattach here).
+-D -RR: It do whatever is needed to get a screen session.
+-e xy: It change the command characters.
+-f: It make the flow control on, -fn = off, -fa = auto.
+-h lines: It set the size of the scrollback history buffer.
+
+-q: It quiet startup. Exits with non-zero return code if unsuccessful.
+-Q: It commands will send the response to the stdout of the querying process.
+-r [session]: It reattach to a detached screen process.
+-R: It reattach if possible, otherwise start a new session.
+-S sockname: It name this session .sockname instead of …
+
+-v: It print “Screen version 4.06.02 (GNU) 23-Oct-17”.
+-x: It attach to a not detached screen. (Multi display mode).
+-X: It execute as a screen command in the specified session.
