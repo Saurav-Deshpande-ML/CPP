@@ -1,0 +1,53 @@
+1] vim <filename> : opens the file filename if exists else creates one and opens it.
+
+
+2] i
+to exit command mode and enter insert mode
+
+3] Esc
+exit insert mode and enter command mode.
+
+4] :w 
+write/save
+
+5] :wq
+write/save and quit vim
+
+6] :x
+save and quit vim
+
+7] :q
+quit vim (unsaved)
+
+8] I
+insert at beginning of line
+
+9] yy 
+copy a line at which cursor exists.
+entering a number before yy (<n>yy) copies <n> number of lines from the line where cursor exists.
+example: 7yy copies 7 lines.
+
+10] p
+paste
+
+11] dd 
+deletes a line at which cursor exists.
+entering a number before dd (<n>dd) deletes <n> number of lines from the line where cursor exists.
+example: 5dd deletes 5 lines.
+
+12] / backward search n 
+This is used for finding the next occurrence.
+
+13] / backward search N
+This is somehow related to the above command but it searches in the opposite direction.
+
+14] /<string>
+finds all occurrences of <string> in the file.
+
+15] :%s/<current string>/<new string>/gc
+to replace the <current string> with <new string>.
+c in gc asks for confirmation for every occurrence of string before replacing.
+
+16] :%s/<current string>/<new string>/g
+to replace the <current string> with <new string>.
+does not ask for confirmation replaces all occurrences of <current string> with <new string>.
