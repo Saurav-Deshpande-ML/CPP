@@ -1,0 +1,60 @@
+1] grep <string> <file name> 
+searches for <string> in <file name>.
+example:
+grep <string>  names.txt
+the above statement matches "John Williamson" as well as it contains <string>  in it.
+
+2] grep -w <string> <file name> 
+matches the exact <string> in <file name>.
+grep -w <string>  names.txt
+the above statement will only match <string>  (case-sensitive) and not match "John Williamson although it contains <string>  in it.
+
+3] grep -wi <string> <file name>
+-i for grep to be non case-sensitive
+example:
+grep -wi <string>  names.txt
+the above statement will match <string>  (not case-sensitive).
+
+
+4] grep -win <string> <file name>
+-n to display line number at which match is found.
+
+5] grep -win -B <n> <string> <file name>
+to display previous <n> lines before match.
+
+6] grep -win -A <n> <string> <file name>
+to display next <n> lines after match.
+
+7] grep -win -C <n> <string> <file name>
+to display previous and next <n> lines after match.
+
+8] grep -win <string> ./*
+searches for <string> in all files inside directory (not sub directory).
+
+9] grep -win <string> ./*.txt
+searches for <string> in all files of ".txt" extension inside directory (not sub directory).
+
+10] grep -winr <string>  .
+searches for <string> in all files inside directory (sub directory too).
+displays matches, file path in which match is found and line number .
+
+11] grep -wirl <string>  .
+searches for <string> in all files inside directory (sub directory too).
+displays file path in which match is found.
+
+12] grep -wirc <string>  .
+same functionality as above + displays total matches found count in that file.
+
+13] history | grep "git commit"
+searches for "git commit" command in history of linux commands.
+
+14] history | grep "git commit" | grep "dotfile"
+searches for "git commit" on "dotfile" command in history of linux commands.
+
+15] grep "...-...-...." names.txt
+matches any 3 characters followed by "-" followed by another 3 characters followed by "-" followed by another 4 characters.
+. matches any character.
+
+16] grep -P "\d{3}-\d{3}-\d{4}" names.txt
+matches 3 digits followed by "-" followed by another 3 digits followed by "-" followed by another 4 digits.
+\d matches a digit.
