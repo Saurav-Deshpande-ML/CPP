@@ -1,0 +1,57 @@
+Normally, you would compile a program like:
+    g++ [flags] <source files> -o <output file>
+
+For example:
+    g++ abc.cpp -o output 
+
+add a -g option to enable built-in debugging support
+(which gdb needs):
+    g++ [other flags] -g <source files> -o <output file>
+
+For example:
+    g++ -g abc.cpp -o output 
+
+
+
+1] break/b main - Puts a breakpoint at the beginning of the program
+
+2] break/b - Puts a breakpoint at the current line
+
+3] break/b N - Puts a breakpoint at line N
+
+4] break/b +N - Puts a breakpoint N lines down from the current line
+
+5] break/b fn - Puts a breakpoint at the beginning of function "fn"
+
+6] delte/d N - Deletes breakpoint number N
+
+7] info break - list breakpoints
+
+8] run [args] : This command runs the current executable file.
+args - if program takes any arguments.
+
+9] continue/c - Continues running the program until the next breakpoint or error
+
+10] frame/f - Runs until the current function is finished
+
+11] step/s - Runs the next line of the program
+
+12] step/s N - Runs the next N lines of the program 
+
+13] next/n - Like s, but it does not step into functions (next line)
+
+14] u N - Runs until you get N lines in front of the current line
+
+15] print/p var - Prints the current value of the variable "var"
+
+16] bt - Prints a stack trace
+
+17] quit/q - Quits gdb
+
+18] list/l	Show lines of code surrounding the current point
+
+19] ->layout next 
+    ->list 
+split gdb view with code
+
+20] refresh - makes the text aligned if distorted.
